@@ -72,7 +72,7 @@
   },
   "dependencies": {
     "@substrate-system/a11y": "^0.0.17",
-    "@substrate-system/web-component": "^0.0.44"
+    "@substrate-system/web-component": "^0.0.46"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.11.0",
