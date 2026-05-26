@@ -14,7 +14,6 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "lint": "eslint \"./**/*.{ts,js}\"",
-    "build-tests": "esbuild test/index.ts --target=es2020 --bundle --keep-names > test/test-bundle.js",
     "build-example:ssr": "npm run build && npm run build-example:ssr:examplejs && npm run build-css:min && cp ./dist/index.min.css ./example/ssr/index.css && cp ./dist/umd.min.js ./example/ssr/ && esbuild --bundle --format=esm --platform=node ./example/ssr/ssr.ts | node --input-type=module",
     "build-example:ssr:examplejs": "esbuild --bundle ./example/ssr/index.ts > example/ssr/index.js",
     "serve-example:ssr": "ecstatic ./example/ssr",
