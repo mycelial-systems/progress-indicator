@@ -6,23 +6,10 @@ export const TAG = 'progress-indicator'
  * Do not render, only attach event listeners.
  */
 export class ProgressIndicator extends HTMLElement {
-    calculatedCircumference:number
-    radius:number
-
     static TAG = TAG
 
     static define () {
         Define(ProgressIndicator.TAG, this)
-    }
-
-    constructor () {
-        super()
-
-        // Calculate the circle radius and the normalised version which
-        // is radius minus the stroke width
-        const radius:number = this.radius = (this.viewBox / 2)
-        const normalisedRadius = radius - this.stroke
-        this.calculatedCircumference = normalisedRadius * 2 * Math.PI
     }
 
     static get observedAttributes () {
@@ -39,6 +26,14 @@ export class ProgressIndicator extends HTMLElement {
         return (this.getAttribute('stroke') ?
             parseInt(this.getAttribute('stroke')!) :
             5)
+    }
+
+    get radius ():number {
+        return this.viewBox / 2
+    }
+
+    get calculatedCircumference ():number {
+        return (this.radius - this.stroke) * 2 * Math.PI
     }
 
     get label ():string {
