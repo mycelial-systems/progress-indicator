@@ -38,6 +38,7 @@ npm i -S @substrate-system/progress-indicator
 ```
 
 ## Example
+
 See [./example/index.html](./example/index.html).
 
 See [the demonstration](https://substrate-system.github.io/progress-indicator/).
@@ -193,7 +194,32 @@ your javascript, at the `/css` path.
 import '@substrate-system/progress-indicator/css'
 ```
 
+### CSS Variables
+
+Override these variables in your own CSS to customize the appearance.
+
+```css
+:root {
+    /* generic variables, used as defaults */
+    --font-base: "Space Mono", monospace;
+    --transition: 200ms linear;
+    --color-dark: #1f1a38;
+    --color-dark-glare: #989ea9;
+    --color-success: #76f7bf;
+
+    /* component-specific variables */
+    --progress-indicator-color-complete: var(--color-success);
+    --progress-indicator-progress-stroke: var(--color-dark);
+    --progress-indicator-bg-stroke: var(--color-dark-glare);
+    --progress-indicator-viewbox: auto;
+    --progress-indicator-check-size: 60cqw;
+    --progress-indicator-count-size: max(25cqw, 1rem);
+}
+```
+
+----------------------------------------------------
 ## develop
+----------------------------------------------------
 
 Start a localhost server of the `./example` directory.
 
