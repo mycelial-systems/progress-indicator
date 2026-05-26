@@ -24,6 +24,7 @@ See [an article on piccalil.li/blog](https://piccalil.li/blog/solution-009-progr
   * [No build tools](#no-build-tools-1)
   * [link in HTML](#link-in-html)
   * [Bundler](#bundler)
+  * [CSS Variables](#css-variables)
 - [develop](#develop)
   * [SSR](#ssr)
 
